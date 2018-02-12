@@ -23,8 +23,8 @@ class DoctorController extends Controller
     public function approveAppointment(Request $request, $appointment_id)
     {
         DB::table('appointments')
-        ->where('id', $appointment_id)
-        ->update(['status'=>'Approved']);
+        ->where($appointment_id)
+        ->update(['status' => 'Approved']);
 
     }
     public function makeProfile()
