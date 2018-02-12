@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class appointment extends Model
 {
     protected $primarykey = ['id'];
-    protected $fillable = ['name', 'setTime', 'symptoms'];
+    protected $fillable = ['name', 'setTime', 'symptoms', 'status'];
 }

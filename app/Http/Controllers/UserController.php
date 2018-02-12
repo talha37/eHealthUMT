@@ -17,9 +17,11 @@ $donor->save();
         $result = $weight/($h*$h); 
         return view('pages.view-bmi.php')->with(compact('users'));
    }
-   public function review()
+   public function review(Request $request, $doc_id)
    {
-       
+       $doctors = DB::table('doctors')
+       ->where('doc_id')
+       ->update(['rating' => $request['stars']]);
    }
      public function makeAppointment(Request $request){
        $appointment = new Appointment;
