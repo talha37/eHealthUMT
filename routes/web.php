@@ -42,3 +42,7 @@ Route::post('/add-user', 'UserController@create_user')->name('add-user');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
