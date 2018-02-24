@@ -9,16 +9,17 @@ class BloodgroupController extends Controller
     public function searchBG(Request $request){
      $blood_group = $request['bloodgroup'];
      $results = 'result';
+     return view('pages.search-BG')->with('bloodgroup', $bloodgroup);
      
     }
     public function displayBG(){
 //all blood groups and its recipient and donors functions will be added in it
         $donors = Donors::all();
-        return view('user.donors-list')->with('donors', $donors);
+        return view('pages.donors-list')->with('donors', $donors);
     }
     
-    public function selectGender(){
-       if (gender == 'male')
+    public function selectGender(Request $request){
+       if ($gender == 'male')
        echo $male;
        else 
        echo $female;
