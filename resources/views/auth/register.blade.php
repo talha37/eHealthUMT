@@ -37,19 +37,28 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label for="phone" class="col-md-4 control-label">Phone</label>
+                             <div class="col-md-6">
+                                <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
+                            </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <div class="form-group">
                             <label for="gender" class="col-md-4 control-label">Gender</label>
+                             <div class="col-md-6">
+                                <input id="gender" type="text" class="form-control" name="gender" value="{{ old('gender') }}" required autofocus>
+                            </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <div class="form-group">
                             <label for="department" class="col-md-4 control-label">Department</label>
+                             <div class="col-md-6">
+                                <input id="department" type="text" class="form-control" name="department" value="{{ old('department') }}" required autofocus>
+                            </div>
                             </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">

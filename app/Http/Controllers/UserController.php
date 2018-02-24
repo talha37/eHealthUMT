@@ -3,6 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use App\User;
+use Session;
+use Redirect;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 
 class UserController extends Controller
