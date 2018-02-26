@@ -23,9 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout')->name('loggedout');
 
 
-//Route::middleware(['auth','revalidate'])->group(function(){
+Route::middleware(['auth','revalidate'])->group(function(){
 
-    /* ========================
+ /* ========================
 *    PROFILE
 ==========================*/
 Route::get('/view-profile', 'UserController@viewprofile');//Works
@@ -35,10 +35,28 @@ Route::post('/edit-profile/{id}', 'UserController@update')->name('update');
 /* ========================
 *    USERS
 ==========================*/
-Route::get('/view-users', 'UserController@viewUsers');//Works
+Route::get('/view-bmi', 'UserController@bmiCalculator');
 Route::resource('user', 'UserController');
-Route::get('/add-users', 'UserController@addUsers');
-Route::post('/add-user', 'UserController@create_user')->name('add-user');
+Route::get('/view-review', 'UserController@review');
 
+/* ========================
+*    BLOODGROUP
+==========================*/
+Route::get('/search-BG', 'BloodgroupController@searchBG');
+Route::get('/display-BG', 'BloodgroupController@displayBG');
+Route::get('/select-gender', 'BloodgroupController@selectGender');
+
+/* ========================
+*    DOCTOR
+==========================*/
+Route::post('/home/{id}', 'DoctorController@cancelAppointment');
+Route::post('/home/{id}', 'DoctorController@approveAppointment');
+
+/* ========================
+*    ADMIN
+==========================*/
+Route::post('/view-blockuser', 'AdminController@blockUser');
+
+});
 
 

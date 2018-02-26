@@ -42,8 +42,9 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group">
+                     <div class="form-group">
                             <label for="phone" class="col-md-4 control-label">Phone</label>
+
                               <div class="col-md-6">
                                 <input id="phone" type="text" class= "form-control" name="phone" value="{{ old('phone') }}" required autofocus>
                               </div>
@@ -65,7 +66,9 @@
                               </div>
                               </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                             
+
+                        <div class="form-group">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
