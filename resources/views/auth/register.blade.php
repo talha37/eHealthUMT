@@ -29,7 +29,7 @@
 
                             <div class="col-md-6">
                             <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required
-                                pattern="^[a-zA-Z0-9.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(umt|umt.edu).pk$" title="Email not valid">
+                                pattern="^[a-zA-Z0-9.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(umt|umt.edu).pk$" title="@umt.edu.pk">
                                 
                                 
                                 

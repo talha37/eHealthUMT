@@ -108,7 +108,7 @@
                         <a href="{{ route('loggedout') }}"><button class="btn btn-primary btn-o">Log Out</button></a>
                     @else
                         <a href="{{ url('/login') }}"><button class="btn btn-primary btn-o">Login</button></a>
-                        <a href="{{ url('/register') }}"><button class="btn btn-primary btn-o">Register</button></a>
+                        <a href="{{ url('/register') }}"><button class="btn btn-primary btn-o">Make Profile</button></a>
                     @endif
                     </div>
                 </div>
