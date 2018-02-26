@@ -20,7 +20,7 @@ class AdminController extends Controller
         $unblock->blocked_user = $id;
         $blocked_user_id = $user;
         $unblock->save();
-        return view ('pages.blockuser')->with(compact('User blocked', 200));
+        return view ('layout.view-blockuser')->with(compact('User blocked', 200));
     }
     
     public function viewUserReview()

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\User;
 use Session;
 use Redirect;
@@ -13,10 +14,10 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function viewprofile(){
-        return view('pages.view-profile');
+        return view('layouts.view-profile');
     }
     public function index(){
-        return view('pages.edit-profile');
+        return view('layouts.edit-profile');
     }
     public function register_api(Request $request){
         $user = User::create([
@@ -95,14 +96,14 @@ $donor->save();
     public function bmiCalculator(Request $request)
     {
         $result = $weight/($h*$h); 
-        return view('pages.view-bmi')->with(compact('users'));
+        return view('layouts.view-bmi')->with(compact('users'));
    }
    public function review(Request $request, $doc_id)
    {
        $doctors = DB::table('doctors')
        ->where('doc_id')
        ->update(['rating' => $request['stars']]);
-       return view('pages.view-review')->with('doctor', $doctor);
+       return view('layouts.view-review')->with('doctor', $doctor);
    }
      public function makeAppointment(Request $request){
        $appointment = new Appointment;
@@ -112,4 +113,12 @@ $donor->save();
         $appointment->symptoms = $request->input('symptoms');
        // $appointment->when = $request->input('when');
         $appointment->save();
+        
+}
+public function activeUser(){
+
+}
+public function inactiveUser(){
+    
+}
 }

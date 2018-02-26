@@ -18,13 +18,14 @@ class DoctorController extends Controller
     public function cancelAppointment($user_id)
     {
         Appointment::find($user_id)->delete();
-        return redirect();
+        return redirect('home');
     }
     public function approveAppointment(Request $request, $appointment_id)
     {
         DB::table('appointments')
         ->where($appointment_id)
         ->update(['status' => 'Approved']);
+        return redirect('home');
 
     }
     public function makeProfile()
