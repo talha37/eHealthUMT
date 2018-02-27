@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -34,6 +35,13 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                
+            }
+            .topleft {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-size: 38px;
             }
 
             .full-height {
@@ -99,7 +107,10 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    eHealthUMT
+                    <!--eHealthUMT -->
+                </div>
+                <div class="html, body">
+                        <div class="eHealthUMT">eHealthUMT</div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -107,8 +118,8 @@
                         <a href="{{ url('/view-profile') }}"><button class="btn btn-primary btn-o">Go to Dashboard</button></a>
                         <a href="{{ route('loggedout') }}"><button class="btn btn-primary btn-o">Log Out</button></a>
                     @else
-                        <a href="{{ url('/login') }}"><button class="btn btn-primary btn-o">Login</button></a>
-                        <a href="{{ url('/register') }}"><button class="btn btn-primary btn-o">Register</button></a>
+                        <a href="{{ url('/login') }}"><button class="btn btn-primary btn-o">User</button></a>
+                        <a href="{{ url('/register') }}"><button class="btn btn-primary btn-o">Doctor</button></a>
                     @endif
                     </div>
                 </div>

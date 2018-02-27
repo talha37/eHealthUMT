@@ -23,7 +23,7 @@
                     rgba(0, 0, 0, 0.7),
                     rgba(0, 0, 0, 0.7)
                 ),
-                url('img/landing-bg.jpg') no-repeat center center fixed;
+                url('img/userbg.jpg') no-repeat center center fixed;
                 background-color: #fff;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
