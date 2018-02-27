@@ -28,8 +28,13 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
+                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required
+                                pattern="^[a-zA-Z0-9.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(umt|umt.edu).pk$" title="@umt.edu.pk">
+                                
+                                
+                                
+                                
+                                
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -37,26 +42,31 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group">
+                     <div class="form-group">
                             <label for="phone" class="col-md-4 control-label">Phone</label>
-                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
-                            </div>
-                            </div>
 
-                            <div class="form-group">
+                              <div class="col-md-6">
+                                <input id="phone" type="text" class= "form-control" name="phone" value="{{ old('phone') }}" required autofocus>
+                              </div>
+                              </div>
+                        
+                              
+
+                        <div class="form-group">
                             <label for="gender" class="col-md-4 control-label">Gender</label>
-                             <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control" name="gender" value="{{ old('gender') }}" required autofocus>
-                            </div>
-                            </div>
-
-                            <div class="form-group">
+                              <div class="col-md-6">
+                                <input id="gender" type="text" class= "form-control" name="gender" value="{{ old('gender') }}" required autofocus>
+                              </div>
+                              </div>
+                        
+                        <div class="form-group">
                             <label for="department" class="col-md-4 control-label">Department</label>
-                             <div class="col-md-6">
-                                <input id="department" type="text" class="form-control" name="department" value="{{ old('department') }}" required autofocus>
-                            </div>
-                            </div>
+                              <div class="col-md-6">
+                                <input id="department" type="text" class= "form-control" name="department" value="{{ old('department') }}" required autofocus>
+                              </div>
+                              </div>
+
+                             
 
                         <div class="form-group">
                             <label for="password" class="col-md-4 control-label">Password</label>
@@ -79,7 +89,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+                        
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
