@@ -89,9 +89,9 @@ class UserController extends Controller
     }
     public function contactDonor()
     {
-$donor = $request->all();
-$donor = new Donor($donor);
-$donor->save();
+       $donor = $request->all();
+       $donor = new Donor($donor);
+       $donor->save();
     }
     public function bmiCalculator(Request $request)
     {
@@ -115,10 +115,13 @@ $donor->save();
         $appointment->save();
         
 }
-public function activeUser(){
-
-}
-public function inactiveUser(){
-    
+    public function activeDonor(){
+        return view('layouts.donors-list');
+  }
+    public function inactiveDonor(Request $request){
+        $donors = DB::table('donors')
+        ->where('donor_id')
+        ->update(['inactive' => 0]);
+         return view('layouts.donors-list');
 }
 }

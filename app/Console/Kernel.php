@@ -12,9 +12,9 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [
+    protected $commands = [ Commands\ActiveUser::class];
         //
-    ];
+    
 
     /**
      * Define the application's command schedule.
@@ -24,8 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+         $schedule->command('Active:User')
+                 ->monthly()->when(function(){
+                     return !is_null($this->donors);
+                 }         
     }
 
     /**
@@ -37,4 +39,5 @@ class Kernel extends ConsoleKernel
     {
         require base_path('routes/console.php');
     }
+
 }
