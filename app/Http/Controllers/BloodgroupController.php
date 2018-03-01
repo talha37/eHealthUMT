@@ -12,8 +12,7 @@ class BloodgroupController extends Controller
      return view('layouts.search-BG')->with('bloodgroup', $bloodgroup);
      
     }
-    public function displayBG(){
-//all blood groups and its recipient and donors functions will be added in it
+    public function donorsList(){
         $donors = Donors::all();
         return view('layouts.donors-list')->with('donors', $donors);
     }

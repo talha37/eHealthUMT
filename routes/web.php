@@ -43,7 +43,7 @@ Route::get('/view-review', 'UserController@review');
 *    BLOODGROUP
 ==========================*/
 Route::get('/search-BG', 'BloodgroupController@searchBG');
-Route::get('/display-BG', 'BloodgroupController@displayBG');
+Route::get('/donors-list', 'BloodgroupController@donorsList');
 Route::get('/select-gender', 'BloodgroupController@selectGender');
 
 /* ========================
