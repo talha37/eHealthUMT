@@ -103,7 +103,7 @@ class UserController extends Controller
        $doctors = DB::table('doctors')
        ->where('doc_id')
        ->update(['rating' => $request['stars']]);
-       return view('layouts.view-review')->with('doctor', $doctor);
+       return view('layouts.user-review')->with('doctor', $doctor);
    }
      public function makeAppointment(Request $request){
        $appointment = new Appointment;
