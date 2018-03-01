@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [ Commands\ActiveUser::class];
+    //protected $commands = [ Commands\ActiveUser::class];
         //
     
 
@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
          $schedule->command('Active:User')
                  ->monthly()->when(function(){
                      return !is_null($this->donors);
-                 }         
+                 });       
     }
 
     /**

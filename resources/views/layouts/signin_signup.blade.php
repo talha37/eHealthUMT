@@ -114,11 +114,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                    @if(Auth::check())
+                    if(Auth::check())
                         <a href="{{ url('/view-profile') }}"><button class="btn btn-primary btn-o">Go to Dashboard</button></a>
                         <a href="{{ route('loggedout') }}"><button class="btn btn-primary btn-o">Log Out</button></a>
                     @else
-                        <a href= "G:\Projects\eHealthUMT\signin_signup"><button class="btn btn-primary btn-o">User</button></a>
+                        <a href="{{ url('~/layout/signin_signup') }}"><button class="btn btn-primary btn-o">fuckkkr</button></a>
+                        <a href="{{ url('~/layout/signin_signup') }}"><button class="btn btn-primary btn-o">fuckkkr</button></a>
                         <a href="{{ url('/register') }}"><button class="btn btn-primary btn-o">Doctor</button></a>
                     @endif
                     </div>
