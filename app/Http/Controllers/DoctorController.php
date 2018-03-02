@@ -31,7 +31,7 @@ class DoctorController extends Controller
         return redirect('home');
 
     }
-    public function makeProfile()
+    public function registerDoctor()
     {
      $doctor = new Doctor();       
 
@@ -53,7 +53,8 @@ class DoctorController extends Controller
         $doctor->phone=$phone;
         $doctor->department=$department;
         $doctor->doctor_type=$doc_type;
-        $doctor->save();      
+        $doctor->save();   
+        return view ('layouts.register-doctor');  
     }
 }
 //$data = $request->all();
