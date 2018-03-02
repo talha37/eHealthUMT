@@ -8,11 +8,11 @@ class AdminController extends Controller
 {
     public function signUp()
     {
-
+          //
     }
-    public function blockUser()
+    public function blockUser(Request $request, $user_id)
     {
- $user = JWTAuth::parseToken()->authenticate();
+ //$user = JWTAuth::parseToken()->authenticate();
         $user_id = $user->id;
         $unblock = new BlockedUser();
         $blocked_by = auth::id();
@@ -25,6 +25,6 @@ class AdminController extends Controller
     
     public function viewUserReview()
     {
-        
+        //
     }
 }

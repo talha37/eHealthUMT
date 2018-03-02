@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\BloodgroupController;
+use App\Http\Controllers\Donors;
 use App\User;
 
 class BloodgroupController extends Controller
