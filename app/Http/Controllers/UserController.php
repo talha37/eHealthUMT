@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function viewprofile(){
-        return view('layouts.view-profile');
+    public function viewprofile(Request $request){
+        $users = User::all();
+        return view('layouts.view-profile');//->with(compact('users'));
     }
     public function index(){
         return view('layouts.edit-profile');
