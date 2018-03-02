@@ -114,7 +114,7 @@ class UserController extends Controller
         $appointment->symptoms = $request->input('symptoms');
        // $appointment->when = $request->input('when');
         $appointment->save();
-        
+        return view('\home');
 }
     public function activeDonor(){
         return view('layouts.donors-list');

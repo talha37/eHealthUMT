@@ -38,6 +38,7 @@ Route::post('/edit-profile/{id}', 'UserController@update')->name('update');
 Route::post('/view-bmi', 'UserController@bmiCalculator');
 Route::resource('user', 'UserController');
 Route::get('/view-review', 'UserController@review');
+Route::post('/home', 'UserController@makeAppointment');
 
 /* ========================
 *    BLOODGROUP
