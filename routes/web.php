@@ -35,7 +35,7 @@ Route::post('/edit-profile/{id}', 'UserController@update')->name('update');
 /* ========================
 *    USERS
 ==========================*/
-Route::get('/view-bmi', 'UserController@bmiCalculator');
+Route::post('/view-bmi', 'UserController@bmiCalculator');
 Route::resource('user', 'UserController');
 Route::get('/view-review', 'UserController@review');
 
@@ -43,7 +43,7 @@ Route::get('/view-review', 'UserController@review');
 *    BLOODGROUP
 ==========================*/
 Route::get('/search-BG', 'BloodgroupController@searchBG');
-Route::get('/display-BG', 'BloodgroupController@displayBG');
+Route::get('/donors-list', 'BloodgroupController@donorsList');
 Route::get('/select-gender', 'BloodgroupController@selectGender');
 
 /* ========================

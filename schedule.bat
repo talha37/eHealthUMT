@@ -1,0 +1,1 @@
+php artizan schedule:run

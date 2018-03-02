@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\BloodgroupController;
+use App\User;
 
 class BloodgroupController extends Controller
 {
     public function searchBG(Request $request){
-     $blood_group = $request['bloodgroup'];
+     $bloodgroup = $request['bloodgroup'];
      $results = 'result';
      return view('layouts.search-BG')->with('bloodgroup', $bloodgroup);
      
     }
-    public function displayBG(){
-//all blood groups and its recipient and donors functions will be added in it
+    public function donorsList(){
         $donors = Donors::all();
         return view('layouts.donors-list')->with('donors', $donors);
     }

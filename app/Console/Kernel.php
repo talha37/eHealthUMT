@@ -24,7 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('Active:User')
+
+         $schedule->command('active:donor')
                  ->monthly()->when(function(){
                      return !is_null($this->donors);
                  });       

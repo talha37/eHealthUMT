@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\BloodGroup;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function Doctor(){
+        return $this->hasMany('App\User', 'doc_id');
+    }
+    public function BloodGroup(){
+        return $this->belongsTo('App\BloodGroup', 'bloodgroup_id');
+    }
 }
